@@ -2,9 +2,9 @@
 
 ## Overview
 
-The `ciphermq-demo` repository provides two demo versions of CipherMQ, a secure, high-performance message broker designed for encrypted message transmission. CipherMQ uses a push-based architecture to facilitate communication between senders and receivers, ensuring **zero message loss** and **exactly-once delivery** through robust acknowledgment mechanisms. Messages are temporarily held in memory and routed via exchanges and queues.
+The `CipherMQ-demo` repository provides two demo versions of CipherMQ, a secure, high-performance message broker designed for encrypted message transmission. CipherMQ uses a push-based architecture to facilitate communication between senders and receivers, ensuring **zero message loss** and **exactly-once delivery** through robust acknowledgment mechanisms. Messages are temporarily held in memory and routed via exchanges and queues.
 
-CipherMQ employs **hybrid encryption** (X25519 for key exchange and AES-GCM-256 for message encryption) to ensure message confidentiality and authenticity. **Mutual TLS (mTLS)** secures client-server communication, protecting against man-in-the-middle attacks. Metadata and public keys are stored in a **PostgreSQL database**, with public keys encrypted using **ChaCha20-Poly1305** for secure storage. Receivers register their public keys with the server, which are securely distributed to senders for encryption.
+CipherMQ employs **hybrid encryption** to ensure message confidentiality and authenticity. **Mutual TLS (mTLS)** secures client-server communication, protecting against man-in-the-middle attacks. Metadata and public keys are stored in a **PostgreSQL database**, with public keys encrypted using **ChaCha20-Poly1305** for secure storage. Receivers register their public keys with the server, which are securely distributed to senders for encryption.
 
 This repository contains two demo setups:
 
